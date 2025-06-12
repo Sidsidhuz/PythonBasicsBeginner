@@ -1,0 +1,85 @@
+🔢 1. Arithmetic Operators
+Used for basic math operations:
+
+| Operator | Description         | Example  | Result |
+| -------- | ------------------- | -------- | ------ |
+| `+`      | Addition            | `3 + 2`  | `5`    |
+| `-`      | Subtraction         | `5 - 3`  | `2`    |
+| `*`      | Multiplication      | `4 * 2`  | `8`    |
+| `/`      | Division            | `5 / 2`  | `2.5`  |
+| `//`     | Floor Division      | `5 // 2` | `2`    |
+| `%`      | Modulus (remainder) | `5 % 2`  | `1`    |
+| `**`     | Exponentiation      | `2 ** 3` | `8`    |
+
+
+🔁 2. Assignment Operators
+Used to assign values to variables:
+
+| Operator | Example   | Equivalent to |
+| -------- | --------- | ------------- |
+| `=`      | `x = 5`   | Assign 5 to x |
+| `+=`     | `x += 3`  | `x = x + 3`   |
+| `-=`     | `x -= 2`  | `x = x - 2`   |
+| `*=`     | `x *= 2`  | `x = x * 2`   |
+| `/=`     | `x /= 2`  | `x = x / 2`   |
+| `//=`    | `x //= 2` | `x = x // 2`  |
+| `%=`     | `x %= 2`  | `x = x % 2`   |
+| `**=`    | `x **= 2` | `x = x ** 2`  |
+
+
+
+
+🧠 3. Comparison (Relational) Operators
+Used to compare two values:
+
+| Operator | Description         | Example  | Result  |
+| -------- | ------------------- | -------- | ------- |
+| `==`     | Equal to            | `5 == 5` | `True`  |
+| `!=`     | Not equal to        | `5 != 3` | `True`  |
+| `>`      | Greater than        | `5 > 2`  | `True`  |
+| `<`      | Less than           | `5 < 2`  | `False` |
+| `>=`     | Greater or equal to | `5 >= 5` | `True`  |
+| `<=`     | Less or equal to    | `3 <= 5` | `True`  |
+
+
+🔗 4. Logical Operators
+Used to combine conditional statements:
+
+| Operator | Description                  | Example          | Result  |
+| -------- | ---------------------------- | ---------------- | ------- |
+| `and`    | True if both are True        | `True and False` | `False` |
+| `or`     | True if at least one is True | `True or False`  | `True`  |
+| `not`    | Inverts the result           | `not True`       | `False` |
+
+
+📦 5. Bitwise Operators
+Operate on bits:
+
+| Operator | Description | Example  | Result |     |     |
+| -------- | ----------- | -------- | ------ | --- | --- |
+| `&`      | AND         | `5 & 3`  | `1`    |     |     |
+| \`       | \`          | OR       | \`5    | 3\` | `7` |
+| `^`      | XOR         | `5 ^ 3`  | `6`    |     |     |
+| `~`      | NOT         | `~5`     | `-6`   |     |     |
+| `<<`     | Left Shift  | `5 << 1` | `10`   |     |     |
+| `>>`     | Right Shift | `5 >> 1` | `2`    |     |     |
+
+
+🧪 6. Identity Operators
+Compare memory locations:
+
+| Operator | Description     | Example      | Result       |
+| -------- | --------------- | ------------ | ------------ |
+| `is`     | Same object     | `x is y`     | `True/False` |
+| `is not` | Not same object | `x is not y` | `True/False` |
+
+
+📦 7. Membership Operators
+Test for presence in sequences:
+
+| Operator | Description          | Example            | Result |
+| -------- | -------------------- | ------------------ | ------ |
+| `in`     | Value exists         | `'a' in 'apple'`   | `True` |
+| `not in` | Value does not exist | `'x' not in 'cat'` | `True` |
+
+
