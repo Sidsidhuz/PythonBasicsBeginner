@@ -97,4 +97,18 @@
 # def mul(x):
 #     return x*2
 # print(add(mul(3)))
+import random,time
 
+tickets = []
+for i in range(7):
+    tickets.append(random.randint(1,10))
+print("Be Patient")
+print("Decision Pending", end="")
+for i in range(random.randint(1,10)):
+    print(".", end = "",flush = False)
+    time.sleep(1)
+win = ''
+for i in tickets:
+    win = win + str(i)
+
+print("\n",win)

@@ -11,10 +11,10 @@ from functools import reduce
 #     return word in 'aeiou' or word in 'AEIOU'
 # val = "Sidharth TV"
 # print("-".join(filter(vowel,val)))
-
+import Note
 data = [0,1,'',None,'python',8,'sidharth']
 print(list(filter(None,data))) # prints element avoiding all the none element such as False , empty str, 0
-
+# print(__name__)
 # l = [2,3,3,7,4,12,1,16,22,23,27]
 #
 # def great(x):
