@@ -13,7 +13,8 @@ while t:
         pass
     except :
         print("Unexpected error")
-
+    finally:
+        print("finally Hellow")
 # def div():
 #     a = int(input("Enter element a :"))
 #     b = int(input("Enter element b :"))

@@ -96,19 +96,27 @@
 #     return x+2
 # def mul(x):
 #     return x*2
-# print(add(mul(3)))
-import random,time
+# # print(add(mul(3)))
+# import random,time
+#
+# tickets = []
+# for i in range(7):
+#     tickets.append(random.randint(1,10))
+# print("Be Patient")
+# print("Decision Pending", end="")
+# for i in range(random.randint(1,10)):
+#     print(".", end = "",flush = False)
+#     time.sleep(1)
+# win = ''
+# for i in tickets:
+#     win = win + str(i)
+#
+# print("\n",win)
+val = [[1,2,3],[4,5,6],['a','b']]
+l = [val[i][0] for i in range(len(val))]
+print(l)
 
-tickets = []
-for i in range(7):
-    tickets.append(random.randint(1,10))
-print("Be Patient")
-print("Decision Pending", end="")
-for i in range(random.randint(1,10)):
-    print(".", end = "",flush = False)
-    time.sleep(1)
-win = ''
-for i in tickets:
-    win = win + str(i)
-
-print("\n",win)
+a = [1,2,3,4]
+b = [10,20,30,40]
+l = [i+j for i,j in zip(a,b)]
+print(l)
