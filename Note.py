@@ -112,6 +112,9 @@
 #     win = win + str(i)
 #
 # print("\n",win)
+
+################---->Comprehension<------############################################
+
 val = [[1,2,3],[4,5,6],['a','b']]
 l = [val[i][0] for i in range(len(val))]
 print(l)
@@ -119,4 +122,9 @@ print(l)
 a = [1,2,3,4]
 b = [10,20,30,40]
 l = [i+j for i,j in zip(a,b)]
+print(l)
+
+
+mat = [[1,2],[3,4],[5,6],[7,8]]
+l = [[[mat[i][0]],[mat[i][1]] ]for i in range(len(mat[0]))]
 print(l)
