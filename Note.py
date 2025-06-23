@@ -17,7 +17,7 @@
 # print(l)
 #
 # #
-# from curses.ascii import isdigit
+
 
 # s = []
 # print(s.isEmpty())
@@ -129,7 +129,10 @@
 # l = [[row[i] for row in mat] for i in range(len(mat[0]))]
 # print(l)
 
-strs = 'Devin123'
-l = [i for i in strs if i.isdigit()]
-print(l)
+# strs = 'Devin123'
+# l =tuple(i for i in strs if i.isdigit())
+# print(l)
 
+my_list = ['tool',23,3.4,'bar',55,'toolbar']
+l = [i for i in my_list if str(i).isalpha()]
+print(l)
