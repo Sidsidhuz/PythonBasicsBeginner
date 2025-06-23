@@ -37,5 +37,4 @@ p = zip(key,value)
 print(next(p))
 print(next(p))
 
-print(iter(key))
 

@@ -1,7 +1,8 @@
 # File Handling in python (Text)
 
 #basic way to access a text file in python
-file = open('1.txt','r')
+file = open('1.txt','w+')
+file.write("last line ")
 print(file.read())
 
 #write into txt file
@@ -13,4 +14,5 @@ with open('1.txt','w') as f:
 # Read from a txt file
 with open('1.txt','r') as f:
      lines = f.readlines() #stores as a list ie; type(lines) -> list()
-print(lines)    # print(t)
+# print(lines)    # print(t)
+s = 'sid'

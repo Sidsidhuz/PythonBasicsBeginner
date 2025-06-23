@@ -16,8 +16,8 @@
 # l.pop(0)
 # print(l)
 #
-#
-
+# #
+# from curses.ascii import isdigit
 
 # s = []
 # print(s.isEmpty())
@@ -115,16 +115,21 @@
 
 ################---->Comprehension<------############################################
 
-val = [[1,2,3],[4,5,6],['a','b']]
-l = [val[i][0] for i in range(len(val))]
+# val = [[1,2,3],[4,5,6],['a','b']]
+# l = [val[i][0] for i in range(len(val))]
+# print(l)
+#
+# a = [1,2,3,4]
+# b = [10,20,30,40]
+# l = [i+j for i,j in zip(a,b)]
+# print(l)
+#
+#
+# mat = [[1,2],[3,4],[5,6],[7,8]]
+# l = [[row[i] for row in mat] for i in range(len(mat[0]))]
+# print(l)
+
+strs = 'Devin123'
+l = [i for i in strs if i.isdigit()]
 print(l)
 
-a = [1,2,3,4]
-b = [10,20,30,40]
-l = [i+j for i,j in zip(a,b)]
-print(l)
-
-
-mat = [[1,2],[3,4],[5,6],[7,8]]
-l = [[[mat[i][0]],[mat[i][1]] ]for i in range(len(mat[0]))]
-print(l)
