@@ -133,6 +133,41 @@
 # l =tuple(i for i in strs if i.isdigit())
 # print(l)
 
-my_list = ['tool',23,3.4,'bar',55,'toolbar']
-l = [i for i in my_list if str(i).isalpha()]
-print(l)
+# my_list = ['tool','23',3.4,'bar',55,'toolbar']
+# l = [i for i in my_list if str(i).isalpha()]
+# print(l)
+
+
+
+
+# def Printnum(a):
+#     l = []
+#     while a != 0 :
+#         print(a)
+#         a = a - 1
+# def recNum(a):
+#     if a == 0:
+#         print(0)
+#     else:
+#         print(a)
+#         return recNum(a-1)
+# recNum(5)
+
+
+numbers = [3,8,1,7,9,5,4,2,10]
+temp = []
+for i in range (len(numbers)):
+    for j in range(len(numbers)):
+        if numbers[j] > numbers[i]:
+            temp = numbers[j]
+            numbers[i] = numbers[j]
+            numbers[j] = temp
+print(numbers)
+print(f"Greatest number from the list is {numbers[-1]}")
+#
+# large = 0
+# for i in range(len(numbers)):
+#     if numbers[i] > large:
+#         large = numbers[i]
+#         pos = i
+# print(f"largest element from the list is {large} and position is {pos}")
