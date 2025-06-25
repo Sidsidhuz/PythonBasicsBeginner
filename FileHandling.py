@@ -10,35 +10,41 @@
 file = open('1.txt','w+')
 file.write("last line ")
 print(file.read())
+file.close()
 
 #write into txt file
 with open('1.txt','w') as f:
-    f.write('hello world - 1 \nBetween ')
-    f.write('hello world - 2  \n ')
+    f.write('hello world - 1 \n')
+    f.write('hello world - 2  \n')
+
+# append into file
+with open('1.txt','a') as f:
+    f.write('this is the appended line : 1\n')
+    f.write('this is the appended line : 2\n')
+
 
 
 # Read from a txt file
-with open('1.txt','r') as f:
-     lines = f.readlines() #stores as a list ie; type(lines) -> list()
-# print(lines)    # print(t)
-s = 'sid'
+# with open('1.txt','r') as f:
+#      lines = f.readlines() #stores as a list ie; type(lines) -> list()
+# # print(lines)    # print(t)
 
-# append +
 
 with open('1.txt','r+') as f:
-    lines = f.readlines()
+    lines = (f.readlines())
     print(lines)
 
 
 # seek operation - used to initialize file pointer
 
 with open('1.txt','r') as f:
-    # f.seek(0)
     l = f.read()
     print('seek')
     print(l)
-    f.seek(0)
-
-# peek operation - used to see the location of the file pointer
 
 
+# tell operation - used to see the location of the file pointer
+
+
+with open('1.txt','r') as f:
+    print(f.tell())

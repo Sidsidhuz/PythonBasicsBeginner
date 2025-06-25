@@ -154,20 +154,72 @@
 # recNum(5)
 
 
-numbers = [3,8,1,7,9,5,4,2,10]
-temp = []
-for i in range (len(numbers)):
-    for j in range(len(numbers)):
-        if numbers[j] > numbers[i]:
-            temp = numbers[j]
-            numbers[i] = numbers[j]
-            numbers[j] = temp
-print(numbers)
-print(f"Greatest number from the list is {numbers[-1]}")
-#
+# numbers = [3,8,1,7,9,5,4,2,10]
+# temp = []
+# for i in range (len(numbers)):
+#     for j in range(len(numbers)):
+#         if numbers[j] > numbers[i]:
+#             temp = numbers[j]
+#             numbers[i] = numbers[j]
+#             numbers[j] = temp
+# print(numbers)
+# print(f"Greatest number from the list is {numbers[-1]}")
+# #
 # large = 0
 # for i in range(len(numbers)):
 #     if numbers[i] > large:
 #         large = numbers[i]
 #         pos = i
 # print(f"largest element from the list is {large} and position is {pos}")
+
+
+#################################### File Handling ####################################################################
+
+#
+# with open('2.txt','w') as f:
+#     f.write('this is the appended line : 1\n')
+#     f.write('this is the appended line : 2\n')
+# with open('2.txt','r') as f:
+#     l = f.readlines()
+#     l1 = []
+#     for i in l:
+#
+#         l1.append(i.strip())
+# print(l1)
+# # print(l)
+#
+# with open('2.txt','w') as f:
+#     f.write('this is the appended line : 1\n')
+#     f.write('this is the appended line : 2\n')
+# with open('2.txt','r') as f:
+#     l = f.readlines()
+#     l1 = []
+#     for i in l:
+#
+#         l1.append(i[5:8])
+# print(l1)
+# # print(l)
+
+# with open('2.txt','r+') as f:
+#     f.write('this is the appended line : 1\n')
+#     f.write('this is the appended line : 2\n')
+#     f.write('this is the appended line : 3\n')
+#     f.write('this is the appended line : 4\n')
+#     f.write('this is the appended line : 5\n')
+#     f.write('this is the appended line : 6\n')
+#     f.seek(0)
+#     print(f.read())
+
+
+# with open('2.txt','r') as f:
+#     print(f.readline())
+#     print(f.tell())
+#     print(f.readline())
+#     print(f.readline())
+#     f.seek(0)
+#     print(f.readline())
+
+with open(r'G:\Pythoneering\Exptlab1\WorkOutExpt\maxresdefault.jpg','rb') as f:
+    PicBi = f.read()
+with open(r'G:\Pythoneering\Exptlab1\WorkOutExpt\maxresdefault.jpg','rb') as f, open('NewEnd.jpg', 'wb') as new:
+    new.write(f.read())
