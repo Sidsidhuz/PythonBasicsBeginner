@@ -1,0 +1,31 @@
+import csv
+
+# CSV (Comma Seperated Values)
+
+# Reading from a CSV file
+# with open(r'G:\Pythoneering\Exptlab1\WorkOutExpt\dataone.csv','r' ) as csvfile, open('datatwo.csv','w') as csvfile2:
+#     csv_reader = csv.reader(csvfile)
+#     N = csv.writer(csvfile2)
+#     for row in csv_reader:
+#         N.writerow(row)
+with open ('G:\Pythoneering\Exptlab1\WorkOutExpt\dataone.csv','r') as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=',')
+    ls = [i for i in csvreader]
+    with open('data3.csv','w',newline='') as csvw:
+        csvwriter = csv.writer(csvw)
+        csvwriter.writerows(ls)
+
+
+
+data = [['Name','Age','City'],
+        ['Alice', 25, 'New York'],
+        ['Bob',30,'Los Angeles']]
+with open('datatwo.csv','w') as newfile:
+    csv_writer = csv.writer(newfile)
+    csv_writer.writerows(data)
+
+with open('G:\Pythoneering\Exptlab1\WorkOutExpt\dataone.csv','r') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    for i in csv_reader:
+        print(i)
+
