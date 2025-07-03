@@ -17,7 +17,7 @@
 # print(l)
 #
 # #
-
+from traceback import print_list
 
 # s = []
 # print(s.isEmpty())
@@ -90,7 +90,6 @@
 #     print(f'{i}:{j}')
 
 
-
 #function Composition
 # def add(x):
 #     return x+2
@@ -136,8 +135,6 @@
 # my_list = ['tool','23',3.4,'bar',55,'toolbar']
 # l = [i for i in my_list if str(i).isalpha()]
 # print(l)
-
-
 
 
 # def Printnum(a):
@@ -219,7 +216,42 @@
 #     f.seek(0)
 #     print(f.readline())
 
-with open(r'G:\Pythoneering\Exptlab1\WorkOutExpt\maxresdefault.jpg','rb') as f:
-    PicBi = f.read()
-with open(r'G:\Pythoneering\Exptlab1\WorkOutExpt\maxresdefault.jpg','rb') as f, open('NewEnd.jpg', 'wb') as new:
-    new.write(f.read())
+# with open(r'G:\Pythoneering\Exptlab1\WorkOutExpt\maxresdefault.jpg','rb') as f:
+#     PicBi = f.read()
+# with open(r'G:\Pythoneering\Exptlab1\WorkOutExpt\maxresdefault.jpg','rb') as f, open('NewEnd.jpg', 'wb') as new:
+#     new.write(f.read())
+#######################################################################################################################
+# [(1,'odd'),(2,'even'),(3,'odd'),(4,'even'),(5,'odd')]
+# l = [(i ,'even') if i % 2 == 0 else (i,'odd') for i in range(1,6)]
+# print(l)
+
+# number = [-2,-3,-1,0,1,2,3,0,5]
+# #['-ve','-ve','-ve','zero','+ve','+ve','+ve','zero','+ve']
+# l = ['-ve' if i < 0 else 'zero' if i==0 else'+ve' for i in number]
+# print(l)
+
+##################################################################################################################
+
+# [['Apple', 'Banana', 'Cherry'], ['Date', 'Fig', 'Grape'], ['Kiwi', 'Lemon', 'Mango']]
+# [['Apple'], ['Banana'], ['Cherry'], ['Date'], ['Fig'], ['Grape'], ['Kiwi'], ['Lemon'], ['Mango']]
+
+# mat = [['apple','banana','cherry'],
+#        ['date','fig','grape'],
+#        ['kiwi','lemon','mango']]
+#
+# l = [[i.capitalize() for i in j] for j in mat ]
+# print(l)
+# li = [[j.capitalize()] for i in mat for j in i ]
+# print(li)
+########################################################################################################################
+# input --> [1, 14, 24, 12, 113]
+# expected output
+# ['child', 'teen', 'adult', 'child', 'adult']
+
+c = int(input("enter the number of people: "))
+lis = [int(input("enter the ages :"))for j in range(c) ]
+l = ['child' if i <= 13 else 'teen' if 13 < i < 20 else 'adult' for i in lis]
+print(lis)
+print(l)
+
+
