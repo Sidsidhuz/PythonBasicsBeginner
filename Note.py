@@ -248,10 +248,84 @@ from traceback import print_list
 # expected output
 # ['child', 'teen', 'adult', 'child', 'adult']
 
-c = int(input("enter the number of people: "))
-lis = [int(input("enter the ages :"))for j in range(c) ]
-l = ['child' if i <= 13 else 'teen' if 13 < i < 20 else 'adult' for i in lis]
-print(lis)
-print(l)
+# c = int(input("enter the number of people: "))
+# lis = [int(input("enter the ages :"))for j in range(c) ]
+# l = ['child' if i <= 13 else 'teen' if 13 < i < 20 else 'adult' for i in lis]
+# print(lis)
+# print(l)
+########################################################################################################################
+# Track the number of students using a class variable
+# class Student():
+#     c_std = []
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         self.c_std.append(name)
+#     def count(self):
+#         return len(self.c_std)
+#
+#
+#
+# std1 = Student("Sidharth", 21)
+# std2 = Student("Joe", 20)
+# std3 = Student("Gokul", 23)
+#
+# print(len(Student.c_std))
+################################################################################################################
+# Class for Bank Account that supports
+# deposit
+#withdraw
+#checkBalance
 
+# class Bank:
+#     accounts = []
+#     def __init__(self,name,amount = 0):
+#         self.name = name
+#         self.amount = amount
+#         self.accounts.append(name)
+#
+#     def CheckBalance(self): #balance
+#         return self.amount
+#
+#     def Withdraw(self,amountwith):
+#         if amountwith > self.amount:
+#             print("Insufficient Balance")
+#         else:
+#             self.deposit -= amountwith
+#
+#     def deposit(self,amountdep):
+#         self.amount += amountdep
+#         print(f"Successfully Deposited amount: {amountdep}")
+#         print(f"Current amount: {self.amount}")
+#
+#
+#     def adminPanal(password):
+#         if password == "@123":
+#             print("Admin Login Successfull ")
+#             print("Press 1 to view registered people ")
+#             print("Press 2 to exit ")
+#             i = input()
+#             if i == "1":
+#                 print("People are :",end='')
+#                 print(Bank.accounts)
+#             elif i == "2":
+#                 return
+#
+#         else:
+#             print("Admin Login Failed")
+#
+# per1 = Bank("Sidharth",2000)
+# per2 = Bank("Gokul",5000)
+# per3 = Bank("Joe",6000)
+# per4 = Bank("Abhi sheik",7000)
+# per5 = Bank("Chinjitha",8000)
+#
+# # print(per1.CheckBalance())
+# # per1.Withdraw(12000)
+# # print(per1.CheckBalance())
+# # per1.deposit(20000)
+# # print(per1.CheckBalance())
+# Bank.adminPanal("@123")
+########################################################################################################################
 
