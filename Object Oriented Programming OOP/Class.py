@@ -31,6 +31,7 @@
 
 class Employee:
     "This is Employee class" # point 1
+    p = 0
     employs= [] # Class variable
     def __init__(self, first,last, salary = int(),mid = None): # __init__ is used to declare Constructor  & self is used to refer the object that is called
         self.first = first

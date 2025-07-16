@@ -88,18 +88,43 @@ from datetime import time
 # arry = [i for i in range(100000)]
 # find_sqr(arry)
 
-def decorator_with_argument(message):
-    def actual_decorator(func):
-        def wrapper(*args, **kwargs):
-            print(f'{message} before calling {func.__name__}')
-            result = func(*args, **kwargs)
-            print(f'{message} after calling {func.__name__}')
-            return result
-        return wrapper
-    return actual_decorator
-@decorator_with_argument('hello')
-def hello(name):
-    print(f'Hello, {name}')
+# def decorator_with_argument(message):
+#     def actual_decorator(func):
+#         def wrapper(*args, **kwargs):
+#             print(f'{message} before calling {func.__name__}')
+#             result = func(*args, **kwargs)
+#             print(f'{message} after calling {func.__name__}')
+#             return result
+#         return wrapper
+#     return actual_decorator
+# @decorator_with_argument('hello')
+# def hello(name):
+#     print(f'Hello, {name}')
+#
+#
+# hello('SiD')
+##########################################################################
+# def upper(func):
+#     def wrapper1(*args, **kwargs):
+#         result = func(*args, **kwargs)
+#         return result.upper()
+#     return wrapper1
+#
+# def exclamation(func):
+#     def wrapper2(*args, **kwargs):
+#         result = func(*args, **kwargs)
+#         return result + '!'
+#     return wrapper2
+#
+# class Greeting:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     @exclamation
+#     @upper
+#     def say_hello(self):
+#         return f'Hello {self.name}'
+# greet = Greeting('sid')
+# greet.say_hello()
+#####################################################################################################
 
-
-hello('SiD')
