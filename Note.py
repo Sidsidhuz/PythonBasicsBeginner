@@ -17,7 +17,7 @@
 # print(l)
 #
 # #
-from traceback import print_list
+# from traceback import print_list
 
 # s = []
 # print(s.isEmpty())
@@ -328,4 +328,23 @@ from traceback import print_list
 # # print(per1.CheckBalance())
 # Bank.adminPanal("@123")
 ########################################################################################################################
+# File Handling using Re
+# Extract the phone number from the give file using re method
+import re
+with open('data.txt','r+') as f:
+    lines = f.readlines()
+    strSamp = ''
+    for i in lines:
+        strSamp += i
+    # print(strSamp)
+    pattern = re.compile(r'\d{3}.\d{3}.\d{4}')
+    matches = pattern.finditer(strSamp)
+    for match in matches:
+        # print(match.group())
+        # print(type(match))
+        with open ('dataEntry.txt','a+') as E:
+            E.write(match.group())
+            E.write('\n')
+
+
 
