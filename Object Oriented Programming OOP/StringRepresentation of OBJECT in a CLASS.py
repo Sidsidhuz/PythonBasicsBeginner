@@ -7,10 +7,11 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
-    def __str__(self):
+    def __str__(self): #point 1
         return self.fullname()
 
 obj = Employee('Sid','TV',200)
 obj1 = Employee('dsf','TV',200)
 
-print(obj1)
+print(obj1)# If this statement was passed without declaring the point 1 __str__/__repr__ , this returns an object.
+#Since we have declared the point 1 , the function returns the fullname and that is printed here
