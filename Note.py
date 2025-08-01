@@ -330,21 +330,85 @@
 ########################################################################################################################
 # File Handling using Re
 # Extract the phone number from the give file using re method
-import re
-with open('data.txt','r+') as f:
-    lines = f.readlines()
-    strSamp = ''
-    for i in lines:
-        strSamp += i
-    # print(strSamp)
-    pattern = re.compile(r'\d{3}.\d{3}.\d{4}')
-    matches = pattern.finditer(strSamp)
-    for match in matches:
-        # print(match.group())
-        # print(type(match))
-        with open ('dataEntry.txt','a+') as E:
-            E.write(match.group())
-            E.write('\n')
+# import re
+# with open('data.txt','r+') as f:
+#     lines = f.readlines()
+#     strSamp = ''
+#     for i in lines:
+#         strSamp += i
+#     # print(strSamp)
+#     pattern = re.compile(r'\d{3}.\d{3}.\d{4}')
+#     matches = pattern.finditer(strSamp)
+#     for match in matches:
+#         # print(match.group())
+#         # print(type(match))
+#         with open ('dataEntry.txt','a+') as E:
+#             E.write(match.group())
+#             E.write('\n')
+#
+#
+#
+######################ENCAPSULATION#############################
+################Q1###############################
+# class Person:
+#     def __init__(self, first, age):
+#         self.first = first
+#         self.__age = age
+#
+#     def display(self):
+#         return f'Name: {self.first},Age:{self.__age}'
+#
+#     def get_age(self):
+#         return self.__age
+#
+#     def set_age(self, age):
+#         if age > 0 :
+#             self.__age = age
+#
+#         else:
+#             print('Age cant be zero')
+#
+# per1 = Person(first='A', age=20)
+# per2 = Person(first="B", age=30)
+# per1.set_age(32)
+# print(per1.display())
+####################################Q2########################################################
 
+# class ATM:
+#     def __init__(self, balance):
+#         self.__balance = balance
+#
+#     def withdraw(self,amount):
+#         if self.__check_balance(amount):
+#             self.__balance -= amount
+#             print(f'Withdraw {amount}')
+#         else:
+#             print('Insufficient balance')
+#
+#
+#     def __check_balance(self,amount):
+#         if self.__balance <= amount:
+#             return self.__balance>= amount
+#
+#
+# atm = ATM(100)
+# atm.withdraw(200)
 
+##########################################Q3###########################################################################
 
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.__grade = grade
+
+    def result(self):
+        avg = self.__calculate_avg()
+        print(f"{self.name}'s average grade is {avg}")
+        print("Result" , 'Pass' if avg >=60 else 'Fail')
+    def __calculate_avg(self):
+        return sum(self.__grade) / len(self.__grade)
+
+s1 = Student('John', [40,40,64,80,74])
+s1.result()
+s2 = Student('Sid', [100,100,100,100,10])
+s2.result()
