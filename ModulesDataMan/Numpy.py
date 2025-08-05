@@ -74,18 +74,63 @@ import numpy as np
 # print(arr1 - arr)
 # print()
 # print(np.tan(arr1))
-
-arr2 = np.array([[[1,2,3,4],[5,6,7,8]],[[9,10,11,12],[13,14,15,16]]])
-# for i in arr2:
-#     print(i)
-#     for j in i:
-#         print(j)
-#         for k in j:
-#             print(k)
+#
+# arr2 = np.array([[[1,2,3,4],[5,6,7,8]],[[9,10,11,12],[13,14,15,16]]])
+# # for i in arr2:
+# #     print(i)
+# #     for j in i:
+# #         print(j)
+# #         for k in j:
+# #             print(k)
 # res = np.nditer(arr2)
-# for i in res:
+# for i in np.nditer(arr2,op_flags = ['readwrite']):
+#     i[...] = i * 10
 #     print(i)
+# # print(arr2.flat)
+# # for i in arr2.flat:
+#     print(i)
+# def sqr(x):
+#     return x*x
+# def add(a,b,c):
+#     return a+b+c
+#
+# arr1 = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+# arr2 = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+# arr3 = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+# # print(sqr(arr))
+# sqrd = np.vectorize(sqr)
+# added = np.vectorize(add)
+# print(added(arr1,arr2,arr3))
+# # print(sqrd(arr))
+# print(np.ones((3,4)))
+# print(np.full((5,5,5), 4))
+# a = np.array([[1,2,3,2,5,6],[2,7,8,5,9,3],[4,5,6,8,9,2],[8,1,0,3,7,4],[9,8,7,6,4,5],[1,2,3,4,5,6]])
+# # print(np.linalg.det(a))
+# # print(np.linalg.inv(a))
+# print(np.min(a))
+# print(np.max(a))
+# print(np.mean(a))
+# print(np.std(a))
+# print(np.median(a))
+# before = np.array([[1,2,3],[4,5,6]])
+# after = before.reshape(3,2)
+# # print(before)
+# print(after)
+# print(np.matmul(before,after))
+a = np.array([1,2,3,4,5])
+b= np.array([6,7,8,9,10])
+# print(np.vstack((a,a,a,b)))
+# print(np.hstack((a,a,a,b)))
 
-print(arr2.flat)
-for i in arr2.flat:
-    print(i)
+print(np.arange(5))
+print(np.arange(5,9))
+print(np.arange(5,9,2))
+print(np.arange(1,9,2).reshape(2,2))
+
+print(np.linspace(0,1,10))
+print(np.linspace(0,1,10).astype(int))
+
+before = np.array([[1,2,3],[4,5,6]])
+print(before.ravel())
+
+
